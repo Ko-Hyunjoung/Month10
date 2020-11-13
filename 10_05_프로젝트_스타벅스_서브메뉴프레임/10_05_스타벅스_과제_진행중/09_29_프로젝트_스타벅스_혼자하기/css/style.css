@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* 스킵메뉴 */
+#skip {z-index:2;position:absolute;top:0;left:0;width:100%;}
+#skip > li {width:100%;}
+#skip > li > a {display:block;width:100%;color:#fff;background:#000;line-height:0;font-size:0px;text-align:center;}
+#skip > li > a:focus {line-height:50px;font-size:17px;}
+
+/* 웹 문서 전체 랩핑 박스블럭 */
+#wrap {z-index:1;position:relative;width:100%;}
+
+/* 헤더영역 */
+#wrap #header {z-index:3;position:fixed;top:0;left:0;width:100%;height:120px;border-top:2px solid #000;border-bottom:1px solid #e5e5e5;background:#f6f5ef;}
+#wrap #header .wrap {width:1100px;height:120px;margin:0 auto;}
+
+/* 로고 */
+#wrap #header .wrap .left-wrap {float:left;width:75px;height:120px;}
+#wrap #header .wrap .left-wrap h1 {width:75px;height:75px;padding:22.5px 0 22.5px 0;}
+#wrap #header .wrap .left-wrap h1 > a {display:block;width:75px;height:75px;}
+#wrap #header .wrap .left-wrap h1 > a > img {width:100%;}
+
+#wrap #header .wrap .right-wrap {float:left;width:1025px;height:120px;}
+
+/* 사이드메뉴 */
+#wrap #header .wrap .right-wrap #aside {width:100%;height:54px;text-align:right;}
+#wrap #header .wrap .right-wrap #aside > ul {display:inline-block;padding:10px 30px 0 0;}
+#wrap #header .wrap .right-wrap #aside > ul > li {display:inline-block;margin-left:25px;}
+#wrap #header .wrap .right-wrap #aside > ul > li:last-child {margin-left:15px;}
+#wrap #header .wrap .right-wrap #aside > ul > li > a {font-size:13px;color:#555;font-weight:500;}
+#wrap #header .wrap .right-wrap #aside > ul > li > a:hover {text-decoration:underline;}
+#wrap #header .wrap .right-wrap #aside > ul > li > a > img {vertical-align:middle;background:#fff;border:1px solid #aaa;padding:5px;border-radius:5px;}
+
+/* 메인메뉴 */
+#wrap #header .wrap .right-wrap #nav {width:100%;height:66px;}
+#wrap #header .wrap .right-wrap #nav > ul {float:right;}
+#wrap #header .wrap .right-wrap #nav > ul > li {float:left;}
+#wrap #header .wrap .right-wrap #nav > ul > li > a {display:block;padding:10px 20px 40px 20px;font-size:14px;color:#444;}
+#wrap #header .wrap .right-wrap #nav > ul > li > a:hover {color:#669900;text-decoration:underline;background:#2c2a29;}
+
+/* 메인영역 */
+#wrap #main   {z-index:2;position:relative;margin-top:123px;}
+#wrap #main #section1  {width:100%;height:646px;background:url(../img/2020_autumn1_bg.jpg) no-repeat 50% 0;background-size:100% 100%;}
+
+#wrap #main #section2  {width:100%;height:62px;}
+#wrap #main #section2 > ul {width:100%;height:62px;}
+#wrap #main #section2 > ul > li {width:50%;height:62px;float:left;}
+#wrap #main #section2 > ul > li:nth-child(1) {background:#111;}
+#wrap #main #section2 > ul > li:nth-child(2) {background:#f6f5ef;}
+
+#wrap #main #section3  {display:none;width:100%;height:658px;background:#f6f5ef;}
+#wrap #main #section4  {width:100%;height:167px;padding:30px 0 40px 0;background:#1e3932;}
+#wrap #main #section5  {width:100%;height:573px;background:url(../img/20_autumn1_bg.jpg) no-repeat 50% 0;background-size:cover;}
+#wrap #main #section6  {width:100%;height:400px;background:#f4eed9;}
+#wrap #main #section7  {width:100%;height:800px;background:url(../img/fav_prod_bg_new.jpg) no-repeat 50% 0 fixed;background-size:cover;}
+#wrap #main #section8  {width:100%;height:695px;background:#fff;}
+#wrap #main #section9  {width:100%;height:400px;background:url(../img/store_bg.jpg) no-repeat 50% 0;background-size:100% 100%;}
+
+/* 푸터영역 */
+#wrap #footer {z-index:1;position:relative;width:100%;height:488px;padding:32px 0 35px 0;background:#2c2a29;}

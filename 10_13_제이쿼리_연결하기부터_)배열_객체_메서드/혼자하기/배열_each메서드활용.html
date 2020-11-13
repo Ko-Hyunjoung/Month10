@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+
+    <h1> Array() 객체</h1>
+
+    <script>
+        $(function(){
+            var fruits = [];
+                fruits[0]="banana";
+                fruits[1]="pear";
+                fruits[2]="apple";
+
+                $.each(fruits, function(index, value){
+                    console.log(index, value);
+                });
+
+        });
+    </script>
+    
+</body>
+</html>

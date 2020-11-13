@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 if문</title>
+
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+<!--     
+    <h1>제어문</h1>
+    -조건문
+    -반복문
+
+
+    <h1>조건문 if문</h1>   
+    조건문은 
+    3항 연산자 조건문, if(){} 조건문, switch(){} 조건문 이렇게 3가지로 나눌 수 있습니다.
+
+    <h2>조건문 if문</h2>
+    조건 ? 참 : 거짓 ;   (3항 연산자)
+
+    [합격 불합격 판정 조건문 예시]
+    <script>
+        /*
+        var avg = Number(prompt("점수를 입력하세요!")); //외부 입력 대기   //Number를 안쓰면  "90" 이렇게 스트링문자가 되서 논리적으로는 숫자가 아닌게 되서 === 일때 다르게 나와
+        var result ="";
+
+            // 문법형식
+            // [조건절] ? [참 true] : [거짓 false];
+            
+            avg >= 60 ? result="합격" : result="불합격";
+
+            alert( result );
+        */
+    // </script>
+
+
+
+
+
+    // <h2>조건문 if문</h2> -->
+    <!-- if 조건문은 조건절을 받아서 조건이 참이면 코드 실행, 그렇지 않으면 실행안합니다. -->
+    <!--
+                                                           if 조건문 표현 방식
+    단순 조건문(1가지)                                         if ~
+    단순 조건문(2가지) = 3항 연산자                            if ~ else
+    다중 조건문(3가지)                                         if ~ else if ~ else
+    다중 조건문(많은 조건)                                     if ~ else if ~ else if ~ else if ~ else ...
+
+    if 조건문에 논리연산이 포함된 복잡한 조건 방식 AND(&&) OR(||) NOT(!)
+                                                              if ~ else if ~ else
+    -->
+
+
+<!--    
+    <h2>if ~ 다중 조건문(2가지)</h2>
+    <h3>문제 예시 : 성적처리</h3>
+    <script>
+        var avg = Number(prompt("점수를 입력하세요"));
+
+            if(조건절){     참 조건이면
+
+            }
+            else{           거짓 조건 그 밖에 ~ 
+
+            }
+
+            if( avg >= 60 ){
+                alert("합격");
+            }
+            else{
+                alert("불합격");
+            }
+
+
+
+    </script> 
+-->
+<!-- 
+    <h2> if ~ else if ~ else 다중 조건문(3가지)</h2>
+    <h3>문제 예시 : 성적처리</h3>
+    <script>
+        var avg = Number(prompt("점수를 입력하세요"));
+
+            if(조건절){                만약 조건1이 참 이면
+
+            }
+            else if(조건절){           만약 그 밖에 조건2가 참이면
+
+            }
+            else{                      그 외에 모든 조건
+
+            }
+
+            if( avg >= 90 ){
+                alert("우수 합격");
+            }
+            else if( avg >= 60 ){
+                alert("합격");
+            }
+            else{
+                alert("불합격");
+            }
+
+
+
+    </script>
+
+
+
+    
+    <h2> if ~ else if ~ else ... 다중 조건문(n가지)</h2>
+    <h3>문제 예시 : 학점처리 A+(95이상) A(90이상) B+(85이상) B(80이상) C+(75이상) C(70이상) D(65이상) E(60이상) F(60미만)</h3>
+    <script>
+        var avg = Number(prompt("점수를 입력하세요"));
+/*
+            if(조건절){                만약 조건1이 참 이면
+
+            }
+            else if(조건절){           만약 그 밖에 조건2가 참이면
+
+            }
+            else if(조건절){           만약 그 밖에 조건3가 참이면
+
+            }
+            :                          그 밖에 만약 조건 n 이 참이면
+            else{                      그 외에 모든 조건
+
+            }
+*/
+            if( avg >= 95 ){
+                alert("A+");
+            }
+            else if( avg >= 90 ){
+                alert("A");
+            }
+            else if( avg >= 85 ){
+                alert("B+");
+            }
+            else if( avg >= 80 ){
+                alert("B");
+            }
+            else if( avg >= 75 ){
+                alert("C+");
+            }
+            else if( avg >= 70 ){
+                alert("C");
+            }
+            else if( avg >= 65 ){
+                alert("D");
+            }
+            else if( avg >= 60 ){
+                alert("E");
+            }
+            else{
+                alert("F");
+            }
+
+
+
+    </script>
+
+
+    <h2> if 조건문에 논리연산이 포함된 복잡한 조건 방식 NOT(!) AND(&&) OR(||)  </h2>
+    <h3> 
+        문제 예시 : 국기검정 정보처리기사 합격 불합격 조건 <br>
+         <u>합격조건 : 5개의 모든 과목이 40점 이상이고, 전체평균이 60점 이상이면 합격</u> 
+    </h3>
+    <script>
+              
+
+            -NOT(!)- 부정연산
+            if( !조건절 ){                              조건절이 아니면
+
+            }
+            if( !조건절 && !조건절 ){                   두 조건절이 모두 아니면
+
+            }
+            if( !조건절 || !조건절 ){                   두 조건절이 하나라도 아니면
+
+            }
+
+            
+            -AND(&&)- 그리고, ~이면서, ~이고
+            if( 조건절 && 조건절 ){                     두 조건이 모두 만족
+
+            }
+            if( 조건절 && 조건절 && 조건절... ){        여러 조건이 모두 만족 ...
+
+            }
+
+
+            -OR(||)- ~이거나, 또는 
+            if( 조건절 || 조건절 ){                    둘 중에 하나라도 만족하면 ...
+            }
+            
+            if( 조건절 || 조건절 || 조건절... ){        어느거 하나라도 만족하면 ...
+            }
+
+*/
+//
+//     //     문제 예시 : 국기검정 정보처리기사 합격 불합격 조건 
+//     //     합격조건 : (5개의 모든 과목이 40점 이상이고), 
+//     //                전체평균이 60점 이상이면 합격 
+
+
+//             var subject1 = Number(prompt("과목1 점수 입력 0 ~ 100"));
+//             var subject2 = Number(prompt("과목2 점수 입력 0 ~ 100"));
+//             var subject3 = Number(prompt("과목3 점수 입력 0 ~ 100"));
+//             var subject4 = Number(prompt("과목4 점수 입력 0 ~ 100"));
+//             var subject5 = Number(prompt("과목5 점수 입력 0 ~ 100"));
+//             var tot = subject1 + subject2 + subject3 + subject4 + subject5;
+//             var avg = Math.round(tot/5);      //평균 반올림
+//             var result = null;
+            
+//                 if((subject1>=40 && subject2>=40 && subject3>=40 && subject4>=40 && subject5>=40) && avg>=60 ){
+//                     result = "합격";
+//                     alert(result);
+//                 }
+//                 else {
+//                     result = "불합격";
+//                     alert(result);
+//                 }
+//
+
+    //     문제 예시 : 국기검정 정보처리기사 합격 불합격 조건 
+    //     합격조건 : (5개의 과목중 한과목 이라도 40점 미만이거나
+    //                또는 
+    //                전체평균이 60점 미만이면 불합격 
+
+
+            var subject1 = Number(prompt("과목1 점수 입력 0 ~ 100"));
+            var subject2 = Number(prompt("과목2 점수 입력 0 ~ 100"));
+            var subject3 = Number(prompt("과목3 점수 입력 0 ~ 100"));
+            var subject4 = Number(prompt("과목4 점수 입력 0 ~ 100"));
+            var subject5 = Number(prompt("과목5 점수 입력 0 ~ 100"));
+            var tot = subject1 + subject2 + subject3 + subject4 + subject5;
+            var avg = Math.round(tot/5);      //평균 반올림
+            var result = null;
+            
+                if((subject1<40 || subject2<40 || subject3<40 || subject4<40 || subject5<40) || avg<60 ){
+                    result = "불합격";
+                    alert(result);
+                }
+                else {
+                    result = "합격";
+                    alert(result);
+                }
+    </script>
+ -->    
+
+    <h2> switch() 조건문 </h2>
+<!-- 
+    문법형식
+    switch(조건){
+        case 0:
+            실행내용0;
+            break;
+        case 1:
+            실행내용1;
+            break;
+        case 2:
+            실행내용2;
+            break;
+        case 3:
+            실행내용3;
+            break;
+        case 4:
+            실행내용4;
+            break;
+        default;       //끝났어
+            alert("버튼번호 오류입니다.");
+    }
+   -->
+    <!-- 
+    <h3> 문제 예시 : 메인 버튼의 인덱스 번호에 따른 url() </h3>
+    변수
+    var url = null;
+
+    0 이면 url = "https://www.starbucks.co.kr/coffee/index.do";
+    1 이면 url = "https://www.starbucks.co.kr/menu/index.do";
+    2 이면 url = "https://www.starbucks.co.kr/store/index.do";
+    3 이면 url = "https://www.starbucks.co.kr/responsibility/index.do";
+    4 이면 url = "https://www.starbucks.co.kr/msr/index.do";
+    5 이면 url = "https://www.starbucks.co.kr/whats_new/index.do";
+
+    <script>
+        var url = null;
+        var btnNum = Number(prompt("버튼 번호를 입력하세요 0~5"));
+
+            switch(btnNum){
+                case 0:
+                        url = "https://www.starbucks.co.kr/coffee/index.do";
+                        break;
+                case 1:
+                        url = "https://www.starbucks.co.kr/menu/index.do";
+                        break;
+                case 2:
+                        url = "https://www.starbucks.co.kr/menu/index.do";
+                        break;
+                case 3:
+                        url = "https://www.starbucks.co.kr/menu/index.do";
+                        break;
+                case 4:
+                        url = "https://www.starbucks.co.kr/menu/index.do";
+                        break;
+                default:
+                        alert("버튼번호 오류 입니다.");
+            }
+
+            location.href = url;
+
+    </script>
+    -->
+
+    <h3> 문제 예시 : 메인 버튼의 인덱스 번호에 따른 url() </h3>
+    변수
+    var url = null;
+
+    0 이면 url = "https://www.starbucks.co.kr/coffee/index.do";
+    1 이면 url = "https://www.starbucks.co.kr/menu/index.do";
+    2 이면 url = "https://www.starbucks.co.kr/store/index.do";
+    3 이면 url = "https://www.starbucks.co.kr/responsibility/index.do";
+    4 이면 url = "https://www.starbucks.co.kr/msr/index.do";
+    5 이면 url = "https://www.starbucks.co.kr/whats_new/index.do";
+
+
+
+    <h4> 버튼을 클릭해서 사이트주소로 이동하는 조건문 </h4>
+    <style>
+        .nav-wrap {text-align:center; padding:50px 0;}
+        .nav-wrap span {display:inline-block; margin:0 20px;}
+        .nav-wrap span a {display:block; background:#333; color:#fff; font-size: 20px; line-height:50px; padding:0 30px;}
+        .nav-wrap span a:hover {background:#000;}
+
+
+    </style>
+
+    <div class="nav-wrap">
+        <span><a href="javascript:" class="main-btn">버튼0</a></span>
+        <span><a href="javascript:void(0);" class="main-btn">버튼1</a></span>
+        <span><a href="#" class="main-btn">버튼2</a></span>
+        <span><a href="#" class="main-btn">버튼3</a></span>
+        <span><a href="#" class="main-btn">버튼4</a></span>
+        <span><a href="#" class="main-btn">버튼5</a></span>
+    </div>
+    
+
+    <script>
+        var url = null;
+        var btnNum 
+
+        $(function(){
+  
+   
+            //메인버튼 클릭 이벤트 배열처리 each();
+            $(".main-btn").each(function(index){
+                $(this).on({
+                    click:function(e){
+                        e.preventDefault();
+                        // urlSwitchFn();          //함수(아규먼트); 전달인자
+
+                        btnNum = index;         //btnNum 에 index 번호를 할당(대입) 기억 저장
+                        urlSwitchFn();          //함수(아규먼트); 전달인자
+                    }
+                });
+            });
+
+        });
+
+        //자바스크립트
+        //function urlSwitchFn(btnNum);  //매개변수
+        function urlSwitchFn(){
+            alert(btnNum);                //매개변수 값 확인
+            switch(btnNum){
+                case 0:
+                        url = "https://www.starbucks.co.kr/coffee/index.do";
+                        break;
+                case 1:
+                        url = "https://www.starbucks.co.kr/menu/index.do";
+                        break;
+                case 2:
+                        url = "https://www.starbucks.co.kr/menu/index.do";
+                        break;
+                case 3:
+                        url = "https://www.starbucks.co.kr/menu/index.do";
+                        break;
+                case 4:
+                        url = "https://www.starbucks.co.kr/menu/index.do";
+                        break;
+                default:
+                        alert("버튼번호 오류 입니다.");
+                        return false;  //버튼 클릭 이벤트를 취소
+            }
+
+            location.href = url;
+
+        } //함수 end
+
+    </script>
+
+
+
+</body>
+</html>

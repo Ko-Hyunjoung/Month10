@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부정문_if 조건문에 논리연산이 포함된 복잡한 조건 방식 NOT(!) AND(&&) OR(||)</title>
+</head>
+<body>
+
+    <h3>부정문_if 조건문에 논리연산이 포함된 복잡한 조건 방식 NOT(!) AND(&&) OR(||)</h3>
+    <u>합격조건 : 5개의 모든 과목이 40점 이상이고, 전체평균이 60점 미만이면 불합격</u>
+    <script>
+        var subject1 = Number(prompt("과목1 점수 입력 0~100"));
+        var subject2 = Number(prompt("과목2 점수 입력 0~100"));
+        var subject3 = Number(prompt("과목3 점수 입력 0~100"));
+        var subject4 = Number(prompt("과목4 점수 입력 0~100"));
+        var subject5 = Number(prompt("과목5 점수 입력 0~100"));
+        var tot = subject1 + subject2 + subject3 + subject4 + subject5;
+        var avg = Math.round(tot/5);
+        var result = null;
+
+            if ((subject1<40 || subject2<40 || subject3<40 || subject4<40 || subject5<40) || avg<60){
+                result = "불합격";
+                alert(result);
+            }
+            else {
+                result = "합격";
+                alert(result);
+            }
+    
+
+
+    </script>
+
+</body>
+</html>

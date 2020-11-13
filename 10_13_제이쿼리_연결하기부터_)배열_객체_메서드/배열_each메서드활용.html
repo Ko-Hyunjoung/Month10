@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+    
+    <h1>Array() 객체와 each() 메서드</h1>
+
+    <script>
+        $(function(){
+            //1-1 배열 생성자(new) 제외 선언방법 - 권장방법
+            var cars = [];
+                cars[0]="Saab";
+                cars[1]="Volvo";
+                cars[2]="BMW";
+                cars[3]="Genesis";
+                cars[4]="Benz";
+
+                // jQuery.each();
+                // $.each(배열이름, 콜백함수());
+                // $.each(cars, function(){});
+                $.each(cars, function(index, value){
+                    console.log(index, value);
+                });
+
+        });
+    </script>
+
+
+</body>
+</html>

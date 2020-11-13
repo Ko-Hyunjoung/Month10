@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 가시성 필터 선택자</title>
+
+    <style>
+        #vis {
+            display: none;
+        }
+    </style>
+
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            console.log($("div:hidden").text());          
+            $("div:visible").css("background","orange");
+        });
+    </script>
+
+
+</head>
+<body>
+    <div id="vis">내용1</div>
+    <div>내용2</div>
+    
+</body>
+</html>

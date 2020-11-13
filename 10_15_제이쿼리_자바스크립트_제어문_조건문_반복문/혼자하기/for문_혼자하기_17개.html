@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for문</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+예시문제1
+    <script>
+    /*
+        for(var i=1; i<=10; i++){
+            console.log(i);
+        }
+    */
+      
+    </script>
+<hr>
+<br>
+
+예시문제2
+1~10까지 1씩 증가 그리고 누적 합 출력하는 반복문
+    <script>
+        /*
+        var hap = 0;
+        for(var i=1; i<=10; i++){
+            hap += i;
+        }
+        console.log("1~10 누적 합 : " + hap)
+        */
+    </script>
+
+    result : 1~10 누적 합 : 55
+<hr>
+<br>
+
+예시문제3-1
+1~10사이의 짝수의 누적 합을 반복 출력하는 반복문
+    <script>
+        /*
+        var hap = 0;
+        for(var i=2; i<=10; i+=2){
+            hap += i   
+        }
+        console.log("1~10 사이의 짝수의 합 : " + hap)
+        */
+
+    </script>
+<hr>
+<br>
+
+예시문제4
+1~10사이의 짝수의 증가값과 누적 합을 반복 출력하는 반복문
+단 if조건문과 %를 이용하여 구현하시오.
+
+    <script>
+        /*
+        var hap = 0;
+        for(var i=1; i<=10; i++){
+            if(i % 2 == 0){
+                hap += i;
+                console.log("증가값 : " + i + " " + " " + " " + "1부터 10사이의 짝수의 누적 합 : " + hap);
+            }
+        }
+        */
+
+    </script>
+<hr>
+<br>
+
+예시문제5 - 부정문
+1~10사이의 홀수의 증가값과 누적 합을 반복 출력하는 반복문
+단 if조건문과 %를 이용하여 구현하시오
+    <script>
+        /*
+        var hap = 0;
+        for(var i = 1; i <= 10; i++){
+            if(i % 2 !== 0){
+                hap += i;
+                console.log("증가값 : " + i + " " + " " + " " + "1~10사이 홀수의 누적 합 : " + hap);
+
+            };
+
+        }
+        */
+    </script>
+<hr>
+<br>
+
+예시문제6 - 긍정문
+1~10사이의 홀수의 증가값과 누적 합을 반복 출력하는 반복문
+단 if조건문과 %를 이용하여 구현하시오
+    <script>
+        /*
+        var hap = 0;
+        for(var i = 1; i <=10; i++){
+            if(i % 2 == 1){
+                hap += i;
+                console.log("증가값 : " + i + " " + " " + "1~10사이 홀수의 누적 합 : " + hap);
+
+            }
+
+        }
+        */
+    </script>
+<hr>
+<br>
+
+예시문제7
+1~100까지 5의 배수 증가값과 누적 합을 반복 출력 하는 반복문
+단 if조건문과 % 를 이용하여 구현하시오.
+    <script>
+        /*
+        var hap = 0;
+        for(var i = 5; i <=100; i++){
+            if(i % 5 == 0){
+                hap += i;
+                console.log("증가값 : " + i + " " + " " + "1~100까지 5의 배수의 누적 합 : " + hap);
+
+            }
+
+        }
+        */
+    </script>
+<hr>
+<br>
+
+예시문제8
+구구단 2단 구현
+2*1=2 
+2*2=4 
+2*4=8 
+... 
+    <script>
+        /*
+        for(var i=1; i<=9; i++){
+            console.log(2 + "*" + i + "=" + (2*i));
+        }
+        */
+    </script>
+<hr>
+<br>
+
+예시문제9
+구구단 2단 ~ 9단 까지 구현 하시오 <br>
+    <script>
+        /*
+        for(var i=2; i<=9; i++){
+            document.write("<br>" + i + "단" + "<br>");
+            for(var j=1; j<=9; j++){
+                document.write(i + "*" + j + "=" + ((i*j)<10? "0"+(i*j): (i*j))  + "<br>");
+            }
+        }
+        */
+    </script>
+<hr>
+<br>
+
+예시문제10
+오늘은 구구단을 가로로 출력해볼거예요.
+-모든 컴퓨터의 프로그램은 줄단위로 끝나요
+그래서 줄번호는 가만히 있고 칸 번호가 바뀌어야해요<br>
+    <script>
+    for(j=2; j<=9; j++){
+        document.write("&nbsp")
+
+        for(var i=1; i<=9; i++){
+            for(var j=2; j<=9; j++){
+                document.write(j + "*" + i + "=" + ((j*i)<10? "0"+(j*i): (j*i)) + "&nbsp;&nbsp;");
+                
+            }
+            document.write("<br>")
+
+        }
+    }
+    </script>
+</body>
+</html>

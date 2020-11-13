@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for문으로 table 만들기</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+
+    <style>
+        table {margin:0 auto;border-collapse:collapse;}
+        table tr {width:100%;}
+        table tr td {width:50px;height:50px;border:1px solid #000;text-align:center;}
+    </style>
+
+</head>
+<body>
+    <br>
+    <br>
+
+<!-- for문으로 table 만들기 -->
+    <table class="table1">
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+
+    </table>
+
+    <script>
+        var cnt = 0;
+        for(i=0; i<=4; i++){                   // 0    1
+            for(j=1; j<=3; j++){               // 1~3  1~3
+            cnt++;
+            $(".table1 tr").eq(i).children("td").eq(j).text(cnt);
+
+            }
+        }
+    </script>
+
+<br>
+<br>
+<br>
+
+<!-- table태그 응용 -->
+    <div id="section1">
+
+    </div>
+
+    <script>
+        var txt = "";
+        var cnt = 0;
+
+            txt += "<table class='table2'>";
+            txt += "<caption>for문 테이블2</caption>";
+                for(i=0; i<=4; i++){
+                    txt += "<tr>";
+                    for(j=0; j<=4; j++){
+                        if(j>0 && j<4){
+                            cnt++;
+                            txt += "<td>" + cnt + "</td>";
+                        }
+                        else{
+                            txt += "<td></td>";
+                        }
+                    }
+                    txt += "</tr>";
+                }
+            txt += "</table>";
+
+            console.log( txt );
+            // document.write (txt);
+            $("#section1").html( txt );
+    
+    </script>
+    
+<br>
+<br>
+<br>
+
+<!-- while문 -->
+<div id="section2">
+
+</div>
+    <script>
+        var i=0;
+        var j=0;
+        var cnt=0;
+        var txt="";
+            
+            txt += "<table class='table3'>";
+            txt += "<caption>while문 테이블3</caption>";
+                while(i<5){
+                    i++;
+                    j=0;
+                    txt += "<tr>";
+                    while(j<5){
+                        j++;
+                        cnt++;
+                        txt += "<td>" + cnt + "</td>";
+                    }
+                    txt += "</tr>";
+                }
+
+            txt += "</table>";
+
+            $("#section2").html(txt);
+
+    </script>
+<br>
+<br>
+<br>
+
+<!-- do while문 -->
+<div id="section3">
+
+</div>
+    <script>
+        var i=0;
+        var j=0;
+        var cnt=26;
+        var txt="";
+            
+            txt += "<table class='table4'>";
+            txt += "<caption>do while문 테이블4</caption>";
+                do {
+                    i++;
+                    j=0;
+                    txt += "<tr>";
+                    while(j<5){
+                        j++;
+                        cnt--;
+                        txt += "<td>" + cnt + "</td>";
+                    }
+                    txt += "</tr>";
+                }while(i<5);
+
+            txt += "</table>";
+
+            $("#section3").html(txt);
+
+    </script>
+<br>
+<br>
+<br>
+
+<!-- p.346 do while문 -->
+
+<title>while, do while문</title>
+    <script>
+        var x = 0;
+        var y = 0;
+        var z = 6;
+        var sum1 = 0;
+        var sum2 = 0;
+        while (x <=5) {
+            sum1 += x;
+            x++;
+        }
+        console.log('x : ' + sum1);
+
+        do {
+            sum2 += y;
+            y++;
+
+        }while (y <= 5);
+        console.log('y : ' + sum2);
+
+        do {
+            z++;
+        }while(z <=5);
+        console.log('z : ' + z);
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+#wrap {border:1px solid #d9d9d9;width:1438px;height:3003px;margin:0 auto;}
+
+#wrap #header {width:1438px;height:104.109px;background:#f1f1f1;}
+
+#wrap #main #section1 {width:1438px;height:720px;}
+#wrap #main #section1 .wrap {width:100%;}
+#wrap #main #section1 .wrap .slide-container {position:relative;width:1438px;overflow:hidden;}
+#wrap #main #section1 .wrap .slide-container .slide-view {z-index:1;position:relative;width:1438px;}
+#wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap {position:relative;left:calc(-1438px*0);width:calc(1438px*5);}
+#wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap .slide {float:left;width:1438px;}
+#wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap .slide a {display:block;width:100%;}
+#wrap #main #section1 .wrap .slide-container .slide-view .slide-wrap .slide a img {width:100%;}
+
+/* 넥스트 프리 버튼 */
+#wrap #main #section1 .wrap .slide-container .next-prev-wrap {z-index:2;position:absolute;top:290px;;left:1368px;display:block;width:70px;height:150px;}
+#wrap #main #section1 .wrap .slide-container .next-prev-wrap .next-btn-wrap {display:block;padding:15px 0;width:70px;height:40px;background:#b45f1a;}
+#wrap #main #section1 .wrap .slide-container .next-prev-wrap .next-btn-wrap:hover {background:#fff;}
+#wrap #main #section1 .wrap .slide-container .next-prev-wrap .next-btn-wrap a {display:block;width:100%;height:100%;background:url(../img/arrow_right_on.png) no-repeat 50% 50%;opacity:1;}
+#wrap #main #section1 .wrap .slide-container .next-prev-wrap .prev-btn-wrap {display:block;padding:15px 0;width:70px;height:40px;background:#4f4c43;text-align:center;opacity:50%;}
+#wrap #main #section1 .wrap .slide-container .next-prev-wrap .prev-btn-wrap:hover {background:#fff;}
+#wrap #main #section1 .wrap .slide-container .next-prev-wrap .prev-btn-wrap a {display:block;width:100%;height:100%;background:url(../img/arrow_left_on.png) no-repeat 50% 50%;opacity:1;}
+
+/* 인디게이터 버튼 */
+#wrap #main #section1 .wrap .slide-container .page-btn-wrap {z-index:2;position:absolute;top:657.891px;left:640px;width:175px;height:17px;}
+#wrap #main #section1 .wrap .slide-container .page-btn-wrap li {float:left;}
+#wrap #main #section1 .wrap .slide-container .page-btn-wrap li div {margin:0 10px;}
+#wrap #main #section1 .wrap .slide-container .page-btn-wrap li div .page-btn {display:block;width:10px;height:10px;background:#fff;border-radius:50%;}
+#wrap #main #section1 .wrap .slide-container .page-btn-wrap li div .page-btn.addPageBtn {width:13px;height:13px;border-radius:50%;border:2px solid #fff;background:transparent;}

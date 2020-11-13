@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+    
+    <h1>Object(객체)</h1>
+
+    <script>
+        $(function(){
+            //1-1 Object(객체) 선언방법 - 권장 방법
+            var score = {
+                name:"hyunjoung",
+                kor:100,
+                mat:100,
+                eng:100,
+                edps:100,
+                avg:function(){           //평균점수 콜백함수 사용
+                    var x = (score.kor + score.mat + score.eng + score.edps)/4;
+                    return console.log(score.name + " 평균점수 : " + x);
+                },
+                tot:function(){
+                    var x = (score.kor + score.mat + score.eng + score.edps);
+                    return console.log(score.name + " 전체 합계 점수는 : " + x);
+                }
+
+            };
+
+            score.avg();
+            score.tot();
+
+
+        });
+    </script>
+
+
+</body>
+</html>

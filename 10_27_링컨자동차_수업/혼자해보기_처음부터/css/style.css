@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+#wrap {z-index:1;position: relative;width:1438px;border-left:1px solid #ddd;border-right:1px solid #ddd;margin:0 auto;}
+#wrap #header {z-index:3;position:relative;width:100%;height:103px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;background:#fff;}
+#wrap #main   {z-index:2;position:relative;width:100%;height:auto;background:#fff;}
+#wrap #main #section1 {width:1438px;height:720px;border-bottom:1px solid #ddd;background:#fff;}
+#wrap #main #section1 .slide-container {position:relative;width:100%;}
+#wrap #main #section1 .slide-container .slide-view {z-index:1;position:relative;width:100%;height:auto;overflow:hidden;}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap {position:relative;left:calc(-1438px*0);margin-left:-1438px;width:calc(1468px*7);}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide {float:left;width:1438px;}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide div {width:100%;}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide div a {display:block;}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide div a img {width:100%;}
+
+#wrap #main #section1 .slide-container .page-btn-wrap {z-index:2;position:absolute;bottom:50px;text-align:center;width:100%;}
+#wrap #main #section1 .slide-container .page-btn-wrap li {display:inline-block;width:10px;height:10px;margin:5px 7px;border:2px solid #fff;box-sizing:border-box;border-radius:50%;overflow:hidden;}
+#wrap #main #section1 .slide-container .page-btn-wrap li.addPage {width:20px;height:20px;margin:0 7px;}
+#wrap #main #section1 .slide-container .page-btn-wrap li .page-btn {display:block;width:100%;height:100%;background:#fff;}
+#wrap #main #section1 .slide-container .page-btn-wrap li.addPage a {background:transparent;}
+
+#wrap #main #section1 .slide-container .next-btn-wrap {z-index:2;position:absolute;right:0;bottom:50%;width:70px;height:70px;background:#b45f1a;}
+#wrap #main #section1 .slide-container .next-btn-wrap a {transition:all .3s;position:relative;display:block;width:100%;height:100%;background:#b45f1a;}
+#wrap #main #section1 .slide-container .next-btn-wrap a:hover {background:#fff;transition:all .3s;}
+#wrap #main #section1 .slide-container .next-btn-wrap a:hover i {transition:all .3s;border-color:#222;}
+#wrap #main #section1 .slide-container .next-btn-wrap a i {position:absolute;top:35%;right:40%;display:block;border-top:2px solid #fff;border-right:2px solid #fff;width:30%;height:30%;transform:rotate(45deg);}
+
+#wrap #main #section1 .slide-container .prev-btn-wrap {z-index:2;position:absolute;right:0;top:50%;width:70px;height:70px;background:rgba(79,76,67,.6);}
+#wrap #main #section1 .slide-container .prev-btn-wrap a {transition:all .3s;position:relative;display:block;width:100%;height:100%;background:rgba(79,76,67,.6)}
+#wrap #main #section1 .slide-container .prev-btn-wrap a:hover {background:#fff;transition:all .3s;}
+#wrap #main #section1 .slide-container .prev-btn-wrap a:hover i {transition:all .3s;border-color:#222;}
+#wrap #main #section1 .slide-container .prev-btn-wrap a i {position:absolute;top:35%;left:45%;display:block;border-top:2px solid #fff;border-left:2px solid #fff;width:30%;height:30%;transform:rotate(-45deg);}
+
+#wrap #footer {z-index:1;position:relative;width:100%;/* 임시 */height:700px;background:#fff;border-top:1px solid #ddd;border-bottom:1px solid #ddd;}

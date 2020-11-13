@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if ~ else if ~ else ... 다중 조건문(n가지)   |  학점처리 A+ A B+ B C D E F</title>
+</head>
+<body>
+
+    <h3>if ~ else if ~ else ... 다중 조건문(n가지)   |  학점처리 A+ A B+ B C D E F</h3>
+    <h3>문제 예시 : 학점처리 A+(95이상) A(90이상) B+(85이상) B(80이상) C+(75이상) C(70이상) D(65이상) E(60이상) F(60미만)</h3>
+    
+    <script>
+        var avg = Number(prompt("점수를 입력하세요"));
+            if (avg >= 95){
+                alert("A+");
+            }
+            else if (avg >= 90){
+                alert("A");
+            }
+            else if (avg >= 85){
+                alert("B+");
+            }
+            else if (avg >= 80){
+                alert("B");
+            }
+            else if (avg >= 75){
+                alert("C+");
+            }
+            else if (avg >= 70){
+                alert("C");
+            }
+            else if (avg >= 65){
+                alert("D");
+            }
+            else if (avg >= 60){
+                alert("E");
+            }
+            else{
+                alert("F");
+            }
+    </script>
+
+
+
+</body>
+</html>

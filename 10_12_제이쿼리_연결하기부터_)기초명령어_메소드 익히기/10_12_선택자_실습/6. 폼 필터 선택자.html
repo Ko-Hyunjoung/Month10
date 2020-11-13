@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 폼 필터 선택자</title>
+
+
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(function(){
+            $("input:text").css("background","pink");
+            $("input:password").css("background","ivory");
+            $(":button").css("background","lightgray");
+            $("input:checked + label").css("background","lightgreen");
+            $("option:selected").css("color","lightgreen");
+            $("textarea:disabled").css("background","lightyellow");
+        });
+    </script>
+
+
+
+</head>
+<body>
+    <div><input type="text"></div>
+    <div><input type="password"></div>
+    <div><button>확인</button></div>
+    <div><input type="checkbox" id="css" checked="checked"><label for="css">css</label></div>
+    <div>
+        <select>
+            <option>과목선택</option>
+            <option>javascript</option>
+            <option selected="selected">jQuery</option>
+        </select>
+        <textarea cols="20" rows="5" disabled="disabled">javascript</textarea>                       <!--  disabled라서 안에 글씨 못써    -->
+    </div>
+</body>
+</html>

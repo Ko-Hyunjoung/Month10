@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prepend</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>  
+
+    <script>
+        // $(document).ready(function(){
+        $(function(){
+            cnt=6;
+
+            $(".prepend-btn").on({
+                click:function(){
+                    cnt--; //이전 슬라이드 Preview 좌측에서 우측으로 이동
+                    if(cnt < 1){  //1 2 3 4 5
+                        cnt=5;
+                    }
+                    $("#gallery ul li").eq(4).remove();
+                    $("#gallery ul").prepend("<li><div><img src='./img_1/photo_" + cnt + ".jpg'></div></li>");   
+                }
+            });
+
+            // $(".prepend-btn").on({  //각 칸(li)마다  li 추가 li 안에 또다른 li가 추가된다. 오류
+            //     click:function(){
+            //         $("#gallery ul li").eq(4).remove();
+            //         $("#gallery ul li").prepend("<li><div><img src='./img_1/photo_0.jpg'></div></li>");   
+            //     }
+            // });
+
+            // $(".append-btn").on({  //각 칸(li)마다  li 추가 li 안에 또다른 li가 추가된다. 오류
+            //     click:function(){
+            //         $("#gallery ul li").eq(0).remove();
+            //         $("#gallery ul li").append("<li><div><img src='./img_1/photo_6.jpg'></div></li>");   
+            //     }
+            // });
+
+
+            //append 맨뒤에 추가하는 메소드
+
+            //1. 첫번째 삭제   
+            //2. 첫번재이미지를 맨위에 삽입
+
+            $(".append-btn").on({
+                click:function(){
+                    cnt++;  //다음 슬라이드 Next 우측에서 좌측으로 이동
+                    if(cnt>5){ //1 2 3 4 5
+                        cnt=1;
+                    }
+                    $("#gallery ul li").eq(0).remove();
+                    $("#gallery ul").append("<li><div><img src='./img_1/photo_" + cnt + ".jpg'></div></li>");   
+                }
+            });
+
+
+            //remove-btn 태그 요소 삭제
+            //클릭 이벤트가 발생하면
+            $('.remove-btn').on({
+                click:function(){
+                   $('.txt2').remove(); 
+                }
+            });
+
+            //empty-btn 태그 요소 삭제
+            //클릭 이벤트가 발생하면
+            $('.empty-btn').on({
+                click:function(){
+                   $('.txt1').empty(); 
+                }
+            });
+
+            //before-btn
+            //선택 요소의 이전에 (왼쪽이나 위 위치) 내용 추가
+            $('.before-btn').on({
+                click:function(){
+                    $('#textWrap').before("<div style='display:inline-block;width:200px;'><img src='./img_1/photo-1602294399565-671d7d341502.jpg' width='200' alt=''></div>")
+                }
+            })
+
+            //after-btn
+            //선택 요소의 이후에 (오른쪽이나 아래 위치)  내용 추가
+            $('.after-btn').on({
+                click:function(){
+                    $('#textWrap').after("<div style='display:inline-block;width:200px;'><img src='./img_1/photo-1602401911676-f4cdebd6dc61.jpg' width='200' alt=''></div>")
+                }
+            })
+
+
+
+
+          $("#btn1").click(function(){
+            $("p").prepend("<b>(처음으로) 이전위치에 들어갈 내용Prepended text</b>. ");
+            $("p").append("<b>(끝으로) 이후위치에 들어갈 내용Prepended text</b>. ");
+          });
+
+          $("#btn2").click(function(){
+            $("ol").prepend("<li>(처음으로) 순서있는 목록 이전위치에 추가 목록 Prepended item</li>");
+            $("ol").append("<li><b>(끝으로) 순서있는 목록 이전위치에 추가 목록 Prepended item</li>");
+          });
+        });
+    </script>
+
+    <style>
+        * {margin:0;padding:0;border:0;}
+        ul, li {list-style:none;}
+        img {vertical-align:middle;}
+
+        #gallery {width:1600px;margin:0 auto;}
+        #gallery ul {width:100%;}
+        #gallery ul:after {content:'';display:block;clear:left;}
+        #gallery ul li {float:left;width:20%;}
+        #gallery ul li div {width:100%;}
+        #gallery ul li div img {width:100%;}
+        .button-wrap {width:1600px;margin:50px auto;text-align:center;}
+        .button-wrap button {outline:0;cursor:pointer;display:inline-block;padding:0 40px;height:50px;background:#000;color:#fff;margin:0 10px;}
+        .button-wrap button:hover {background:#a33;}
+
+        #textWrap {width:500px;margin:50px auto;}
+    </style>
+</head>
+<body>
+
+
+    <div id="gallery">
+        <ul>
+            <li><div><img src="./img_1/photo_1.jpg"></div></li>
+            <li><div><img src="./img_1/photo_2.jpg"></div></li>
+            <li><div><img src="./img_1/photo_3.jpg"></div></li>
+            <li><div><img src="./img_1/photo_4.jpg"></div></li>
+            <li><div><img src="./img_1/photo_5.jpg"></div></li>
+        </ul>
+
+        <div class="button-wrap">
+            <button class="prepend-btn">Prepend</button>
+            <button class="append-btn">Append</button>
+            <button class="remove-btn">Remove</button>
+            <button class="empty-btn">Empty</button>
+            <button class="before-btn">Before</button>
+            <button class="after-btn">After</button>
+
+        </div>
+    </div>
+
+
+
+    
+    <div id="textWrap"  style='display:inline-block;'>
+        <p class="txt1"><i>내용과 자식요소까지 삭제하는</i> <u>메서드는</u> empty()</p>
+        <p class="txt2"><u>태그요소를 삭제하는 메서는 remove()</u></p>
+        
+        <ol>
+          <li>List item 1</li>
+          <li>List item 2</li>
+          <li>List item 3</li>
+        </ol>
+        
+        <button id="btn1">Prepend text</button>
+        <button id="btn2">Prepend list item</button>
+        
+    
+    </div>
+
+
+
+
+
+    
+</body>
+</html>

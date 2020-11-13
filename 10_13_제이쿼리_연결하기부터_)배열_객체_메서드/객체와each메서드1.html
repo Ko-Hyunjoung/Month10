@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+    
+    <h1>Object(객체)</h1>
+
+    <script>
+        $(function(){
+            //1-1 Object(객체) 생성자(new) 제외 선언방법
+            var cars = new Object();    // 선언문
+                cars.name = "Genesis";  // 객체(object).속성(key)=값(Value)    데이터 입력
+                cars.year = 2020; 
+                cars.weight = 3000;
+                cars.price = 6000;
+
+                console.log(cars.name);
+                console.log(cars);
+
+                //each()메서드
+                $.each(cars, function(key,value){
+                    console.log(key,value);
+                });
+
+        });
+    </script>
+
+
+</body>
+</html>

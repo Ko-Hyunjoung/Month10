@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 속성 선택자</title>
+    
+    <style>
+        li {
+            margin: 5px;
+        }
+    </style>
+
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(function(){
+            $(".list1 > p[class='list_1']").css("border", "2px solid red");
+            $(".list1 > p[class!='list_1']").css("border", "2px solid orange");
+            $(".list2 > p[class~='list']").css("background", "yellow");
+            $(".list2 > p[class*='list']").css("border", "2px solid green");
+            $(".list3 > p[class|='list']").css("border", "2px solid blue");
+            $(".list4 > p[class^='list']").css("border", "2px solid navy");
+            $(".list4 > p[class$='bg']").css("background", "purple");
+        });
+    </script>
+
+
+</head>
+<body>
+    <div class="list1">
+        <p class="list_1">내용1_1</p>
+        <p class="list_2">내용1_2</p>
+        <p class="list_3">내용1_3</p>
+    </div>
+    
+    <div class="list2">
+        <p class="list bg">내용2_1</p>
+        <p class="list_2">내용2_2</p>
+        <p class="list_3">내용2_3</p>
+    </div>
+    
+    <div class="list3">
+        <p class="list">내용3_1</p>
+        <p class="list-1">내용3_2</p>
+        <p class="list-bg">내용3_3</p>
+    </div>
+    
+    <div class="list4">
+        <p class="list">내용4_1</p>
+        <p class="list-1">내용4_2</p>
+        <p class="list-bg">내용4_3</p>
+    </div>
+    
+</body>
+</html>
